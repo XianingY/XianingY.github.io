@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "All the things about ME"
-author_profile: ture
+author_profile: true
 redirect_from: 
   - /about/
   - /about.html
