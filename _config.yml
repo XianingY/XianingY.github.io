@@ -21,7 +21,7 @@ repository               : "XainingY/XianingY.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "avatar.png"
   name             : "Xianing YANG"
   pronouns         : "he/him"  
   bio              : "Have Fun.^-^"
