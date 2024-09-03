@@ -8,8 +8,8 @@ redirect_from:
 ---
 
 Up to 9/3/2024, I'm a third year undergraduate student from [School of Computer Science](https://cs.whu.edu.cn/), [Wuhan University](https://www.whu.edu.cn/).  
-You can find my CV here: [XX's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).  
-[Education Email](mailto:xianingy@whu.edu.cn) /[Daily Email](mailto:1569297330@qq.com) / [Github](https://github.com/XianingY) / [Wechat](../images/wechat.jpg) 
+You can find my CV here: [Xianing's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).  
+[Email](mailto:xianingy@whu.edu.cn) / [Github](https://github.com/XianingY) / [Wechat](../images/wechat.jpg) 
 
 A data-driven personal website
 ======
