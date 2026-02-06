@@ -2,6 +2,7 @@
 
 import StaggeredMenu from "@/components/StaggeredMenu";
 import TextPressure from "@/components/TextPressure";
+import ColorBends from "@/components/ColorBends";
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home section', link: '#home' },
@@ -38,8 +39,13 @@ export default function Home() {
       {/* Sections moved to normal flow for scrolling */}
 
       {/* HOME SECTION */}
-      <section id="home" className="relative w-full h-screen flex flex-col items-center justify-center snap-start border-b border-white/5">
-        <div className="max-w-4xl px-8 py-12 text-center bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl">
+      <section id="home" className="relative w-full h-screen flex flex-col items-center justify-center snap-start border-b border-white/5 pt-20 overflow-hidden">
+        {/* Color Bends Background */}
+        <div className="absolute inset-0 z-0">
+          <ColorBends />
+        </div>
+
+        <div className="relative z-10 max-w-4xl px-8 py-12 text-center bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl">
           <div className="relative w-full h-[300px] mb-6 flex items-center justify-center">
             <TextPressure
               text="XIANING.Y"
@@ -67,7 +73,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#1a1a1a] snap-start border-b border-white/5">
+      <section id="about" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#1a1a1a] snap-start border-b border-white/5 pt-20">
         <div className="max-w-4xl px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-8 text-[#B19EEF]">About Me</h2>
           <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
@@ -78,7 +84,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES SECTION */}
-      <section id="services" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#121212] snap-start border-b border-white/5">
+      <section id="services" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#121212] snap-start border-b border-white/5 pt-20">
         <div className="max-w-5xl px-8 w-full">
           <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center text-[#5227FF]">Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -97,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#1a1a1a] snap-start">
+      <section id="contact" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#1a1a1a] snap-start pt-20">
         <div className="max-w-4xl px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">Get in Touch</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-xl mx-auto">

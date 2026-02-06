@@ -215,7 +215,10 @@ const TextPressure: React.FC<TextPressureProps> = ({
                 position: 'relative',
                 width: '100%',
                 height: '100%',
-                background: 'transparent'
+                background: 'transparent',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
             }}
         >
             {styleElement}
