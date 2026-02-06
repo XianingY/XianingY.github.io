@@ -1,11 +1,13 @@
 "use client";
 
+import React from 'react';
 import StaggeredMenu from "@/components/StaggeredMenu";
-import TextPressure from "@/components/TextPressure";
+import SplitText from "@/components/SplitText";
 import Iridescence from "@/components/Iridescence";
 import TrueFocus from "@/components/TrueFocus";
 import GradientText from "@/components/GradientText";
 import FlowingMenu from "@/components/FlowingMenu";
+import MagicBento from "@/components/MagicBento";
 import ScrollVelocity from '@/components/ScrollVelocity';
 
 const menuItems = [
@@ -54,21 +56,16 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 max-w-4xl px-8 py-12 text-center bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl">
+        <div className="relative z-10 max-w-4xl px-8 py-12 text-center">
           <div className="relative w-full h-[300px] mb-6 flex items-center justify-center">
-            <TextPressure
+            <SplitText
               text="XIANING.Y"
-              flex={true}
-              alpha={false}
-              stroke={false}
-              width={true}
-              weight={true}
-              italic={true}
-              textColor="#ffffff"
-              minFontSize={36}
+              className="text-[5rem] md:text-[9rem] font-black text-white text-center tracking-tighter leading-none"
+              delay={0.5}
+              duration={0.1}
             />
           </div>
-          <div className="space-y-4 text-lg md:text-xl text-gray-200 leading-relaxed font-light tracking-wide max-w-2xl mx-auto drop-shadow-md">
+          <div className="space-y-4 text-lg md:text-xl text-gray-200 leading-relaxed font-medium tracking-wide max-w-2xl mx-auto drop-shadow-md">
             <p>
               Welcome to my digital space. This represents a convergence of creativity and code.
             </p>
@@ -82,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#1a1a1a] snap-start border-b border-white/5 pt-20">
+      <section id="about" className="relative w-full h-screen flex flex-col items-center justify-center bg-black snap-start border-b border-white/5 pt-20">
         <div className="max-w-4xl px-8 text-center flex flex-col items-center">
           <div className="mb-8">
             <TrueFocus
@@ -92,15 +89,22 @@ export default function Home() {
               manualMode={false}
             />
           </div>
-          <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            I am a passionate developer dedicated to crafting exceptional digital experiences.
-            My journey involves a deep dive into modern web technologies and a constant pursuit of aesthetic perfection.
-          </p>
+
+          <div className="w-full flex items-center justify-center mt-8">
+            <MagicBento
+              textAutoHide={false}
+              enableStars={true}
+              enableSpotlight={true}
+              enableBorderGlow={true}
+            />
+          </div>
+
+
         </div>
       </section>
 
       {/* SERVICES SECTION */}
-      <section id="services" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#121212] snap-start border-b border-white/5 pt-20">
+      <section id="services" className="relative w-full h-screen flex flex-col items-center justify-center bg-black snap-start border-b border-white/5 pt-20">
         <div className="w-full h-full flex flex-col justify-between">
           <div className="w-full px-8 pt-12 pb-4 self-start">
             <GradientText
@@ -120,7 +124,7 @@ export default function Home() {
                 { link: '#', text: 'Technical Strategy', image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000' },
                 { link: '#', text: 'Mobile Apps', image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000' }
               ]}
-              bgColor="#121212"
+              bgColor="#000000"
               textColor="#ffffff"
               speed={20}
             />
@@ -129,10 +133,10 @@ export default function Home() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#1a1a1a] snap-start pt-20">
+      <section id="contact" className="relative w-full h-screen flex flex-col items-center justify-center bg-black snap-start pt-20">
         <div className="w-full">
           <ScrollVelocity
-            texts={['Get in Touch ', 'Let\'s Connect ']}
+            texts={['Get in Touch', 'Let\'s Connect']}
             velocity={50}
             className="text-4xl md:text-8xl font-bold font-black tracking-tighter text-[#5227FF]"
           />
@@ -150,6 +154,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </main >
   );
 }
