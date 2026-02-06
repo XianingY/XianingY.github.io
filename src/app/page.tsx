@@ -3,6 +3,8 @@
 import StaggeredMenu from "@/components/StaggeredMenu";
 import TextPressure from "@/components/TextPressure";
 import ColorBends from "@/components/ColorBends";
+import TrueFocus from "@/components/TrueFocus";
+import FlowingMenu from "@/components/FlowingMenu";
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home section', link: '#home' },
@@ -74,8 +76,15 @@ export default function Home() {
 
       {/* ABOUT SECTION */}
       <section id="about" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#1a1a1a] snap-start border-b border-white/5 pt-20">
-        <div className="max-w-4xl px-8 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-[#B19EEF]">About Me</h2>
+        <div className="max-w-4xl px-8 text-center flex flex-col items-center">
+          <div className="mb-8">
+            <TrueFocus
+              sentence="About Me"
+              borderColor="#B19EEF"
+              glowColor="rgba(177, 158, 239, 0.6)"
+              manualMode={false}
+            />
+          </div>
           <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
             I am a passionate developer dedicated to crafting exceptional digital experiences.
             My journey involves a deep dive into modern web technologies and a constant pursuit of aesthetic perfection.
@@ -85,19 +94,20 @@ export default function Home() {
 
       {/* SERVICES SECTION */}
       <section id="services" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#121212] snap-start border-b border-white/5 pt-20">
-        <div className="max-w-5xl px-8 w-full">
-          <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center text-[#5227FF]">Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Web Development", desc: "Building fast, responsive, and modern websites using Next.js and React." },
-              { title: "UI/UX Design", desc: "Creating intuitive and visually stunning user interfaces." },
-              { title: "Technical Strategy", desc: "Architecting scalable solutions for complex digital problems." }
-            ].map((s, i) => (
-              <div key={i} className="p-8 bg-white/5 rounded-xl border border-white/10 hover:border-[#5227FF]/50 transition-colors">
-                <h3 className="text-2xl font-semibold mb-4 text-white">{s.title}</h3>
-                <p className="text-gray-400">{s.desc}</p>
-              </div>
-            ))}
+        <div className="w-full h-full flex flex-col">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-center text-[#5227FF] pt-12">Services</h2>
+          <div className="flex-1 w-full border-t border-white/10">
+            <FlowingMenu
+              items={[
+                { link: '#', text: 'Web Development', image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2000' },
+                { link: '#', text: 'UI/UX Design', image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000' },
+                { link: '#', text: 'Technical Strategy', image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000' },
+                { link: '#', text: 'Mobile Apps', image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000' }
+              ]}
+              bgColor="#121212"
+              textColor="#ffffff"
+              speed={20}
+            />
           </div>
         </div>
       </section>
