@@ -4,6 +4,7 @@ import StaggeredMenu from "@/components/StaggeredMenu";
 import TextPressure from "@/components/TextPressure";
 import ColorBends from "@/components/ColorBends";
 import TrueFocus from "@/components/TrueFocus";
+import GradientText from "@/components/GradientText";
 import FlowingMenu from "@/components/FlowingMenu";
 
 const menuItems = [
@@ -94,8 +95,17 @@ export default function Home() {
 
       {/* SERVICES SECTION */}
       <section id="services" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#121212] snap-start border-b border-white/5 pt-20">
-        <div className="w-full h-full flex flex-col">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-center text-[#5227FF] pt-12">Services</h2>
+        <div className="w-full h-full flex flex-col justify-between">
+          <div className="w-full px-8 pt-12 pb-4 self-start">
+            <GradientText
+              colors={['#ffffff', '#5227FF', '#B19EEF', '#ffffff']}
+              animationSpeed={8}
+              showBorder={false}
+              className="text-4xl md:text-6xl font-black tracking-tighter"
+            >
+              Services
+            </GradientText>
+          </div>
           <div className="flex-1 w-full border-t border-white/10">
             <FlowingMenu
               items={[
