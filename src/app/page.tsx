@@ -2,10 +2,11 @@
 
 import StaggeredMenu from "@/components/StaggeredMenu";
 import TextPressure from "@/components/TextPressure";
-import ColorBends from "@/components/ColorBends";
+import Iridescence from "@/components/Iridescence";
 import TrueFocus from "@/components/TrueFocus";
 import GradientText from "@/components/GradientText";
 import FlowingMenu from "@/components/FlowingMenu";
+import ScrollVelocity from '@/components/ScrollVelocity';
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home section', link: '#home' },
@@ -43,9 +44,14 @@ export default function Home() {
 
       {/* HOME SECTION */}
       <section id="home" className="relative w-full h-screen flex flex-col items-center justify-center snap-start border-b border-white/5 pt-20 overflow-hidden">
-        {/* Color Bends Background */}
+        {/* Iridescence Background */}
         <div className="absolute inset-0 z-0">
-          <ColorBends />
+          <Iridescence
+            color={[0.1, 0.1, 0.2]}
+            mouseReact={false}
+            amplitude={0.1}
+            speed={1.0}
+          />
         </div>
 
         <div className="relative z-10 max-w-4xl px-8 py-12 text-center bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl">
@@ -124,17 +130,23 @@ export default function Home() {
 
       {/* CONTACT SECTION */}
       <section id="contact" className="relative w-full h-screen flex flex-col items-center justify-center bg-[#1a1a1a] snap-start pt-20">
-        <div className="max-w-4xl px-8 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">Get in Touch</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-xl mx-auto">
-            Ready to start your next project? Let's connect and build something amazing together.
-          </p>
-          <a href="mailto:hello@example.com" className="text-2xl md:text-4xl font-light text-[#B19EEF] hover:text-white transition-colors underline decoration-1 underline-offset-8">
-            hello@example.com
-          </a>
+        <div className="w-full">
+          <ScrollVelocity
+            texts={['Get in Touch ', 'Let\'s Connect ']}
+            velocity={50}
+            className="text-4xl md:text-8xl font-bold font-black tracking-tighter text-[#5227FF]"
+          />
+          <div className="max-w-4xl px-8 text-center mx-auto mt-12">
+            <p className="text-xl text-gray-300 mb-10 max-w-xl mx-auto">
+              Ready to start your next project? Let's connect and build something amazing together.
+            </p>
+            <a href="mailto:hello@example.com" className="text-2xl md:text-4xl font-light text-[#B19EEF] hover:text-white transition-colors underline decoration-1 underline-offset-8">
+              hello@example.com
+            </a>
 
-          <div className="mt-20 text-white/40 text-sm font-mono tracking-widest uppercase">
-            Next.js • TypeScript • GSAP
+            <div className="mt-20 text-white/40 text-sm font-mono tracking-widest uppercase">
+              Next.js • TypeScript • GSAP
+            </div>
           </div>
         </div>
       </section>
