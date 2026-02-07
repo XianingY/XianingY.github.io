@@ -136,6 +136,9 @@ const P10Intro = () => {
             ease: "power3.in"
         }, 2.5);
 
+        // Unmask for scaling
+        t1.set(".intro-title h1", { overflow: "visible" }, 3.4);
+
         // 2. Targets MOVE to center
         t1.to(targetChars, {
             x: (i: number) => {
@@ -259,6 +262,7 @@ const P10Intro = () => {
                     font-weight: 600;
                     line-height: 1;
                     margin: 0;
+                    overflow: hidden; /* Mask falling characters */
                 }
                 .tag {
                      position: absolute;
