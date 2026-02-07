@@ -46,7 +46,7 @@ export default function Home() {
       {/* Sections moved to normal flow for scrolling */}
 
       {/* HOME SECTION */}
-      <section id="home" className="relative w-full h-screen flex flex-col items-center justify-center snap-start border-b border-white/5 pt-20 overflow-hidden">
+      <section id="home" className="relative w-full min-h-screen flex flex-col items-center justify-center snap-start border-b border-white/5 pt-32 pb-20 overflow-hidden">
         {/* Iridescence Background */}
         <div className="absolute inset-0 z-0">
           <Iridescence
@@ -61,7 +61,7 @@ export default function Home() {
           <div className="relative w-full h-[300px] mb-6 flex items-center justify-center">
             <SplitText
               text="XIANING.Y"
-              className="text-[2rem] md:text-[9rem] font-black text-white text-center tracking-tighter leading-none"
+              className="text-[clamp(2.5rem,10vw,8rem)] font-black text-white text-center tracking-tighter leading-none"
               delay={0.5}
               duration={0.1}
             />
@@ -91,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="relative w-full h-screen flex flex-col items-center justify-center bg-black snap-start border-b border-white/5 pt-20">
+      <section id="about" className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black snap-start border-b border-white/5 py-24">
         <div className="max-w-4xl px-8 text-center flex flex-col items-center">
           <div className="mb-8">
             <TrueFocus
