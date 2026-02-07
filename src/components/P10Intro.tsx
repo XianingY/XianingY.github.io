@@ -356,7 +356,7 @@ const P10Intro = () => {
                 </div>
 
                 <footer className="relative w-full p-8 flex justify-between items-center text-white z-20 mix-blend-difference">
-                    <p>Made by Xianing YANG</p>
+                    <p>Made by YANG</p>
                     {/* 左下 */}
                     <p></p>
                     {/* 右下 */}

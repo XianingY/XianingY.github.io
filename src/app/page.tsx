@@ -38,8 +38,6 @@ export default function Home() {
         menuButtonColor="#ffffff"
         openMenuButtonColor="#000000"
         changeMenuColorOnOpen={true}
-        colors={['#B19EEF', '#5227FF']}
-        accentColor="#5227FF"
         isFixed={true}
         closeOnClickAway={true}
       />
