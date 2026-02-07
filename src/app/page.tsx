@@ -61,7 +61,7 @@ export default function Home() {
           <div className="relative w-full h-[300px] mb-6 flex items-center justify-center">
             <SplitText
               text="XIANING.Y"
-              className="text-[5rem] md:text-[9rem] font-black text-white text-center tracking-tighter leading-none"
+              className="text-[2rem] md:text-[9rem] font-black text-white text-center tracking-tighter leading-none"
               delay={0.5}
               duration={0.1}
             />
