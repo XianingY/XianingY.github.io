@@ -116,42 +116,42 @@ const P10Intro = () => {
                 stagger: 0.075,
             }, 2.5)
 
-            // Custom YANG Animation Logic
-            // Indices for BYZANTIUM GENE
-            // B(0) Y(1) Z(2) A(3) N(4) T(5) I(6) U(7) M(8) G(9) E(10) N(11) E(12)
-            // Target: Y(1), A(3), N(4), G(9)
+        // Custom YANG Animation Logic
+        // Indices for BYZANTIUM GENE
+        // B(0) Y(1) Z(2) A(3) N(4) T(5) I(6) U(7) M(8) G(9) E(10) N(11) E(12)
+        // Target: Y(1), A(3), N(4), G(9)
 
-            // Fade out non-target chars
-            .to(
-                ".preloader .intro-title .char",
-                {
-                    opacity: (i: number) => {
-                        return [1, 3, 4, 9].includes(i) ? 1 : 0;
-                    },
-                    duration: 0.5
-                } as any,
-                3.5
-            )
-            // Move Target Chars to Center
-            .to(
-                ".preloader .intro-title .char",
-                {
-                    x: (i: number) => {
-                        if (![1, 3, 4, 9].includes(i)) return 0;
-                        const isMobile = window.innerWidth <= 1000;
-                        if (i === 1) return isMobile ? "6rem" : "10rem";   // Y
-                        if (i === 3) return isMobile ? "3.5rem" : "8rem";  // A
-                        if (i === 4) return isMobile ? "1rem" : "10.5rem";   // N
-                        if (i === 9) return isMobile ? "-1.5rem" : "-2.5rem";  // G
-                        return 0;
-                    },
-                    y: "0%",
-                    scale: 1.5,
-                    duration: 1,
-                    ease: "power2.inOut"
-                } as any,
-                3.5
-            )
+        const chars = gsap.utils.toArray(".preloader .intro-title .char");
+        const targetIndices = [1, 3, 4, 9];
+        const targetChars = chars.filter((_: any, i: number) => targetIndices.includes(i));
+        const nonTargetChars = chars.filter((_: any, i: number) => !targetIndices.includes(i));
+
+        // 1. Non-targets FALL DOWN one by one
+        t1.to(nonTargetChars, {
+            y: "100vh",
+            opacity: 0,
+            rotation: () => Math.random() * 90 - 45, // Random slight rotation
+            duration: 0.8,
+            stagger: 0.04,
+            ease: "power2.in"
+        }, 3.5);
+
+        // 2. Targets MOVE to center
+        t1.to(targetChars, {
+            x: (i: number) => {
+                const isMobile = window.innerWidth <= 1000;
+                // Adjusted indices for filtered selection: 0(Y), 1(A), 2(N), 3(G)
+                if (i === 0) return isMobile ? "6rem" : "10rem";   // Y
+                if (i === 1) return isMobile ? "3.5rem" : "8rem";  // A
+                if (i === 2) return isMobile ? "1rem" : "10.5rem";   // N
+                if (i === 3) return isMobile ? "-1.5rem" : "-2.5rem";  // G
+                return 0;
+            },
+            y: "0%",
+            scale: 1.5,
+            duration: 1,
+            ease: "power2.inOut"
+        } as any, 3.5)
             .to(
                 ".preloader .outro-title",
                 { opacity: 0, duration: 0.1 },
