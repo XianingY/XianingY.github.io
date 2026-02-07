@@ -182,9 +182,21 @@ const P10Intro = () => {
                 gsap.set(".split-overlay", { clipPath: "polygon(0 50%, 100% 50%, 100% 100%, 0 100%)" });
             }, undefined, 4.5)
 
-            // Container Reveal
+            // Line Cut Animation (Reveal thin strip of background)
+            .to(".preloader", {
+                clipPath: "polygon(0 0, 100% 0, 100% 49.5%, 0 49.5%)",
+                duration: 0.5,
+                ease: "power2.out"
+            }, 5)
+            .to(".split-overlay", {
+                clipPath: "polygon(0 50.5%, 100% 50.5%, 100% 100%, 0 100%)",
+                duration: 0.5,
+                ease: "power2.out"
+            }, 5)
+
+            // Container Reveal (Expand inner strip slightly? It starts at 48-52%)
             .to(".p10-container", {
-                clipPath: "polygon(0 48%, 100% 48%, 100% 52%, 0 52%)", // Open slightly
+                clipPath: "polygon(0 45%, 100% 45%, 100% 55%, 0 55%)", // Open slightly more
                 duration: 1,
             }, 5);
 
