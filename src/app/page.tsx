@@ -9,6 +9,7 @@ import GradientText from "@/components/GradientText";
 import FlowingMenu from "@/components/FlowingMenu";
 import MagicBento from "@/components/MagicBento";
 import ScrollVelocity from '@/components/ScrollVelocity';
+import GlassSurface from "@/components/GlassSurface"; // Added
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home section', link: '#home' },
@@ -70,10 +71,21 @@ export default function Home() {
               Welcome to my digital space. This represents a convergence of creativity and code.
             </p>
           </div>
-          <div className="mt-10">
-            <a href="#about" className="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.3)] inline-block">
-              Explore More
-            </a>
+          <div className="mt-10 flex justify-center">
+            <GlassSurface
+              borderRadius={40}
+              borderWidth={1.2}
+              width="fit-content"
+              height="fit-content"
+              redOffset={10}
+              blueOffset={-10}
+              distortionScale={40}
+              mixBlendMode="overlay"
+            >
+              <a href="#about" className="px-8 py-3 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300 inline-block">
+                Explore More
+              </a>
+            </GlassSurface>
           </div>
         </div>
       </section>
