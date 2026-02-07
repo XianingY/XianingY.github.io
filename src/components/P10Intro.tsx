@@ -142,7 +142,7 @@ const P10Intro = () => {
                         if (i === 1) return isMobile ? "6rem" : "10rem";   // Y
                         if (i === 3) return isMobile ? "3.5rem" : "8rem";  // A
                         if (i === 4) return isMobile ? "1rem" : "10.5rem";   // N
-                        if (i === 9) return isMobile ? "-1.5rem" : "-3rem";  // G
+                        if (i === 9) return isMobile ? "-1.5rem" : "-2.5rem";  // G
                         return 0;
                     },
                     y: "0%",
@@ -167,7 +167,7 @@ const P10Intro = () => {
                         if (i === 1) return isMobile ? "6rem" : "10rem";
                         if (i === 3) return isMobile ? "3.5rem" : "8rem";
                         if (i === 4) return isMobile ? "1rem" : "10.5rem";
-                        if (i === 9) return isMobile ? "-1.5rem" : "-3rem";
+                        if (i === 9) return isMobile ? "-1.5rem" : "-2.5rem";
                         return 0;
                     },
                     scale: 1.5,
@@ -307,7 +307,9 @@ const P10Intro = () => {
 
                 <nav className="relative w-full p-8 flex justify-between items-center text-white z-20 mix-blend-difference">
                     <p id="logo" className="font-semibold text-xl">Byzantium</p>
-                    <p>Menu</p>
+                    {/* 左上 */}
+                    <p></p>
+                    {/* 右上 */}
                 </nav>
 
                 <div className="hero-img absolute w-full h-full inset-0">
@@ -316,12 +318,15 @@ const P10Intro = () => {
 
                 <div className="card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[70%] flex justify-center items-center bg-white"
                     style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)' }}>
-                    <h1>Byzantium</h1>
+                    <h1 className="font-serif">你好</h1>
+                    {/* 中间 */}
                 </div>
 
                 <footer className="relative w-full p-8 flex justify-between items-center text-white z-20 mix-blend-difference">
-                    <p>2026</p>
-                    <p>Agency</p>
+                    <p></p>
+                    {/* 左下 */}
+                    <p></p>
+                    {/* 右下 */}
                 </footer>
             </div>
 
