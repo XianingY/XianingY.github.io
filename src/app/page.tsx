@@ -9,7 +9,8 @@ import GradientText from "@/components/GradientText";
 import FlowingMenu from "@/components/FlowingMenu";
 import MagicBento from "@/components/MagicBento";
 import ScrollVelocity from '@/components/ScrollVelocity';
-import GlassSurface from "@/components/GlassSurface"; // Added
+import GlassSurface from "@/components/GlassSurface";
+import P10Intro from "@/components/P10Intro"; // Added
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home section', link: '#home' },
@@ -46,48 +47,9 @@ export default function Home() {
       {/* Sections moved to normal flow for scrolling */}
 
       {/* HOME SECTION */}
-      <section id="home" className="relative w-full min-h-screen flex flex-col items-center justify-center snap-start border-b border-white/5 pt-32 pb-20 overflow-hidden">
-        {/* Iridescence Background */}
-        <div className="absolute inset-0 z-0">
-          <Iridescence
-            color={[0.1, 0.1, 0.2]}
-            mouseReact={false}
-            amplitude={0.1}
-            speed={1.0}
-          />
-        </div>
-
-        <div className="relative z-10 max-w-4xl px-8 py-12 text-center">
-          <div className="relative w-full h-[300px] mb-6 flex items-center justify-center">
-            <SplitText
-              text="XIANING.Y"
-              className="text-[clamp(2.5rem,10vw,8rem)] font-black text-white text-center tracking-tighter leading-none"
-              delay={0.5}
-              duration={0.1}
-            />
-          </div>
-          <div className="space-y-4 text-lg md:text-xl text-gray-200 leading-relaxed font-medium tracking-wide max-w-2xl mx-auto drop-shadow-md">
-            <p>
-              Welcome to my digital space. This represents a convergence of creativity and code.
-            </p>
-          </div>
-          <div className="mt-10 flex justify-center">
-            <GlassSurface
-              borderRadius={40}
-              borderWidth={1.2}
-              width="fit-content"
-              height="fit-content"
-              redOffset={10}
-              blueOffset={-10}
-              distortionScale={40}
-              mixBlendMode="overlay"
-            >
-              <a href="#about" className="px-8 py-3 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300 inline-block">
-                Explore More
-              </a>
-            </GlassSurface>
-          </div>
-        </div>
+      {/* HOME SECTION - Replaced with P10 Intro */}
+      <section id="home" className="relative w-full h-screen snap-start border-b border-white/5 overflow-hidden p-0 m-0">
+        <P10Intro />
       </section>
 
       {/* ABOUT SECTION */}
