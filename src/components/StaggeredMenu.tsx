@@ -88,7 +88,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             preLayerElsRef.current = preLayers;
 
             const offscreen = position === 'left' ? -100 : 100;
-            gsap.set([panel, ...preLayers], { xPercent: offscreen });
+            gsap.set([panel, ...preLayers], { xPercent: offscreen, visibility: 'visible' });
             gsap.set(plusH, { transformOrigin: '50% 50%', rotate: 0 });
             gsap.set(plusV, { transformOrigin: '50% 50%', rotate: 90 });
             gsap.set(icon, { rotate: 0, transformOrigin: '50% 50%' });
