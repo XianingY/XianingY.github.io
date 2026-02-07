@@ -141,11 +141,14 @@
     overflow-y: auto;
     z-index: 10;
     pointer-events: auto;
+    will-change: transform;
+    transform: translateX(100%);
 }
 
 [data-position='left'] .staggered-menu-panel {
     right: auto;
     left: 0;
+    transform: translateX(-100%);
 }
 
 .sm-prelayers {
@@ -169,7 +172,12 @@
     right: 0;
     height: 100%;
     width: 100%;
-    transform: translateX(0);
+    will-change: transform;
+    transform: translateX(100%);
+}
+
+[data-position='left'] .sm-prelayer {
+    transform: translateX(-100%);
 }
 
 .sm-panel-inner {
