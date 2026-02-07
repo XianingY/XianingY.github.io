@@ -142,7 +142,7 @@ const P10Intro = () => {
                         if (i === 1) return isMobile ? "6rem" : "10rem";   // Y
                         if (i === 3) return isMobile ? "3.5rem" : "8rem";  // A
                         if (i === 4) return isMobile ? "1rem" : "10.5rem";   // N
-                        if (i === 9) return isMobile ? "-1.5rem" : "-4rem";  // G
+                        if (i === 9) return isMobile ? "-1.5rem" : "-3rem";  // G
                         return 0;
                     },
                     y: "0%",
@@ -167,7 +167,7 @@ const P10Intro = () => {
                         if (i === 1) return isMobile ? "6rem" : "10rem";
                         if (i === 3) return isMobile ? "3.5rem" : "8rem";
                         if (i === 4) return isMobile ? "1rem" : "10.5rem";
-                        if (i === 9) return isMobile ? "-1.5rem" : "-4rem";
+                        if (i === 9) return isMobile ? "-1.5rem" : "-3rem";
                         return 0;
                     },
                     scale: 1.5,
@@ -183,7 +183,7 @@ const P10Intro = () => {
             }, undefined, 4.5)
 
             // Container Reveal
-            .to(".container", {
+            .to(".p10-container", {
                 clipPath: "polygon(0 48%, 100% 48%, 100% 52%, 0 52%)", // Open slightly
                 duration: 1,
             }, 5);
@@ -208,15 +208,15 @@ const P10Intro = () => {
             },
             6
         )
-            .to(".container", {
+            .to(".p10-container", {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", // Full open
                 duration: 1
             }, 6)
-            .to(".container .card", {
+            .to(".p10-container .card", {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 duration: 1
             }, 6.25)
-            .to(".container .card h1 .char span", {
+            .to(".p10-container .card h1 .char span", {
                 y: "0%",
                 duration: 0.75,
                 stagger: 0.05
@@ -302,7 +302,7 @@ const P10Intro = () => {
                 </div>
             </div>
 
-            <div className="container relative w-full h-full min-h-[100svh] flex flex-col justify-between z-30 bg-white text-black"
+            <div className="p10-container relative w-full h-full min-h-[100svh] flex flex-col justify-between z-30 bg-white text-black"
                 style={{ clipPath: 'polygon(0 48%, 100% 48%, 100% 52%, 0 52%)' }}>
 
                 <nav className="relative w-full p-8 flex justify-between items-center text-white z-20 mix-blend-difference">
