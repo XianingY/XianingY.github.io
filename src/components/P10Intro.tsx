@@ -131,10 +131,10 @@ const P10Intro = () => {
             y: "100vh",
             opacity: 0,
             rotation: () => Math.random() * 90 - 45, // Random slight rotation
-            duration: 0.6,
+            duration: 1.3,
             stagger: 0.04,
-            ease: "power3.in"
-        }, 2.5);
+            ease: "power1.in"
+        }, 2.0);
 
         // Unmask for scaling
         t1.set(".intro-title h1", { overflow: "visible" }, 3.4);
@@ -235,7 +235,9 @@ const P10Intro = () => {
                 y: "0%",
                 duration: 0.75,
                 stagger: 0.05
-            }, 6.5);
+            }, 6.5)
+            // Remove clip-path so hover split effect is visible (not clipped)
+            .set(".p10-container .card", { clipPath: "none" });
 
 
     }, []);
@@ -337,10 +339,20 @@ const P10Intro = () => {
                     />
                 </div>
 
-                <div className="card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[70%] flex justify-center items-center bg-white"
+                <div className="card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[70%] z-30 group"
                     style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)' }}>
-                    <h1 className="font-serif">你 好</h1>
-                    {/* 中间 */}
+
+                    {/* Top Half */}
+                    <div className="absolute inset-0 bg-white flex justify-center items-center transition-transform duration-700 ease-out group-hover:-translate-y-6"
+                        style={{ clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)' }}>
+                        <h1 className="font-serif">你 好</h1>
+                    </div>
+
+                    {/* Bottom Half */}
+                    <div className="absolute inset-0 bg-white flex justify-center items-center transition-transform duration-700 ease-out group-hover:translate-y-6"
+                        style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)' }}>
+                        <h1 className="font-serif">你 好</h1>
+                    </div>
                 </div>
 
                 <footer className="relative w-full p-8 flex justify-between items-center text-white z-20 mix-blend-difference">
