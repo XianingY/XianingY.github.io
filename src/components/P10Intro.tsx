@@ -292,13 +292,13 @@ const P10Intro = () => {
 
             <div className="tags-overlay fixed w-screen h-[100svh] z-50 pointer-events-none">
                 <div className="tag tag-1" style={{ top: '15%', left: '15%' }}>
-                    <p>Art Direction</p>
+                    <p></p>
                 </div>
                 <div className="tag tag-2" style={{ top: '15%', left: '25%' }}>
-                    <p>Design</p>
+                    <p></p>
                 </div>
                 <div className="tag tag-3" style={{ top: '30%', left: '15%' }}>
-                    <p>Development</p>
+                    <p></p>
                 </div>
             </div>
 
@@ -317,7 +317,7 @@ const P10Intro = () => {
                         src="/girl.jpg"
                         alt="Hero"
                         /* 放大到120% 水平居中(50%)，垂直显示在图片的 30% 处 向左平移20单位*/
-                        className="w-full h-full object-cover scale-120 object-[50%_35%] -translate-x-20"
+                        className="w-full h-full object-cover scale-120 object-[50%_35%] -translate-x-19"
                     />
                 </div>
 
@@ -328,7 +328,7 @@ const P10Intro = () => {
                 </div>
 
                 <footer className="relative w-full p-8 flex justify-between items-center text-white z-20 mix-blend-difference">
-                    <p></p>
+                    <p>Made by Xianing YANG</p>
                     {/* 左下 */}
                     <p></p>
                     {/* 右下 */}
