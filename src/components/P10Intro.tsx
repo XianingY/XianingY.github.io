@@ -305,7 +305,7 @@ const P10Intro = () => {
             <div className="p10-container relative w-full h-full min-h-[100svh] flex flex-col justify-between z-30 bg-white text-black"
                 style={{ clipPath: 'polygon(0 48%, 100% 48%, 100% 52%, 0 52%)' }}>
 
-                <nav className="relative w-full p-8 flex justify-between items-center text-white z-20 mix-blend-difference">
+                <nav className="relative w-full py-6 px-8 flex justify-between items-center text-white z-20 mix-blend-difference">
                     <p id="logo" className="font-semibold text-xl">Byzantium</p>
                     {/* 左上 */}
                     <p></p>
@@ -313,12 +313,17 @@ const P10Intro = () => {
                 </nav>
 
                 <div className="hero-img absolute w-full h-full inset-0">
-                    <img src="/p10-hero-img.jpg" alt="Hero" className="w-full h-full object-cover" />
+                    <img
+                        src="/girl.jpg"
+                        alt="Hero"
+                        /* 放大到120% 水平居中(50%)，垂直显示在图片的 30% 处 向左平移20单位*/
+                        className="w-full h-full object-cover scale-120 object-[50%_35%] -translate-x-20"
+                    />
                 </div>
 
                 <div className="card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[70%] flex justify-center items-center bg-white"
                     style={{ clipPath: 'polygon(0 50%, 100% 50%, 100% 50%, 0 50%)' }}>
-                    <h1 className="font-serif">你好</h1>
+                    <h1 className="font-serif">你 好</h1>
                     {/* 中间 */}
                 </div>
 
