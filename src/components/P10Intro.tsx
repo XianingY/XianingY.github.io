@@ -131,9 +131,9 @@ const P10Intro = () => {
             y: "100vh",
             opacity: 0,
             rotation: () => Math.random() * 90 - 45, // Random slight rotation
-            duration: 1.8,
+            duration: 0.6,
             stagger: 0.04,
-            ease: "power2.in"
+            ease: "power3.in"
         }, 2.5);
 
         // 2. Targets MOVE to center
