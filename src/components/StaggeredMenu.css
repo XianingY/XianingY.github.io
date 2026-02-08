@@ -175,9 +175,7 @@
     /* Prevent FOUC */
 }
 
-[data-position='left'] .sm-prelayer {
-    /* No transform needed here as GSAP handles it */
-}
+
 
 .sm-panel-inner {
     flex: 1;

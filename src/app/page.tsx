@@ -2,14 +2,11 @@
 
 import React from 'react';
 import StaggeredMenu from "@/components/StaggeredMenu";
-import SplitText from "@/components/SplitText";
-import Iridescence from "@/components/Iridescence";
 import TrueFocus from "@/components/TrueFocus";
 import GradientText from "@/components/GradientText";
 import FlowingMenu from "@/components/FlowingMenu";
 import MagicBento from "@/components/MagicBento";
 import ScrollVelocity from '@/components/ScrollVelocity';
-import GlassSurface from "@/components/GlassSurface";
 import P10Intro from "@/components/P10Intro"; // Added
 
 const menuItems = [
